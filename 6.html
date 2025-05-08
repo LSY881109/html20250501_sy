@@ -13,12 +13,13 @@
             .container {
                 display: flex;
                 flex-direction: column;
-                color: blueviolet;
+                color: rgb(48, 168, 112);
                 gap: 20px;
             
             }
     
         .gallery {
+            border:solid rgb(226, 238, 233);red;
             display: grid;
             /* grid-template-columns: repeat(컬럼의 갯수, 크기) */
             /* grid-template-columns: 150px 1fr 1fr , 열이 3개인 경우, 수동
@@ -50,7 +51,7 @@
         }
 h2 {
     font-size: 60px;
-    color: blueviolet;
+    color: rgb(1, 255, 43);
     text-align: center;
     border-bottom: double;
     border-top: double;
@@ -59,11 +60,18 @@ h2 {
 }
 h3 {
     margin: 0%;
-    color: red;
+    color: rgb(220, 245, 180);
     font-size: 30px;
     text-align: center;
     border:solid;
 }
+.minititle {
+    
+    font-size: 30px;
+    color: brown;
+    text-align: center;
+}
+
     </style>
     <h2>갤러리</h2>
 
@@ -85,12 +93,12 @@ h3 {
 
       
             <div class="gallery">
-                <img src="img/test1.jpg" alt="샘플사진1">
-                <img src="img/test2.jpg" alt="샘플사진2">
-                <img src="img/test3.jpg" alt="샘플사진3">
-                <img src="img/test4.jpg" alt="샘플사진4">
-                <img src="img/test5.jpg" alt="샘플사진5">
-                <img src="img/test6.jpg" alt="샘플사진6">
+               <div class="minititle"> <img src="img/test1.jpg" alt="샘플사진1">1번고양이</div>
+                <div class="minititle"><img src="img/test2.jpg" alt="샘플사진2">2번고양이</div>
+                <div class="minititle"><img src="img/test3.jpg" alt="샘플사진3">3번고양이</div>
+                <div class="minititle"><img src="img/test4.jpg" alt="샘플사진4">4번고양이</div>
+                <div class="minititle"><img src="img/test5.jpg" alt="샘플사진5">5번고양이</div>
+                <div class="minititle"><img src="img/test6.jpg" alt="샘플사진6">6번고양이</div>
             </div>
         
     </div>
