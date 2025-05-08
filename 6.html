@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미니실습</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                color: blueviolet;
+                gap: 20px;
+            
+            }
+    
+        .gallery {
+            display: grid;
+            /* grid-template-columns: repeat(컬럼의 갯수, 크기) */
+            /* grid-template-columns: 150px 1fr 1fr , 열이 3개인 경우, 수동
+            grid-template-columns: repeat(auto-fit : 자동으로 열의 갯수 지정 */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            /* row-gap: 20px; */
+            /*행간격을 띄우기*/
+
+            /* column-gap: 20px; */
+            /*열간격을 띄우기*/
+
+            gap: 20px;
+            /*행,열 동시에 간격을 띄우기*/
+        }
+
+        .gallery img {
+           padding-left: 20px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            /*이미지 비율 유지하며 채우기 */
+
+
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+        }
+h2 {
+    font-size: 60px;
+    color: blueviolet;
+    text-align: center;
+    border-bottom: double;
+    border-top: double;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+h3 {
+    margin: 0%;
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    border:solid;
+}
+    </style>
+    <h2>갤러리</h2>
+
+
+
+    <div id="grid">
+        <h3>목록</h3>
+        <br>
+        
+     
+        <ol class="container">
+            <li>갤러리1</li>
+            <li>갤러리2</li>
+            <li>갤러리3</li>
+            <li>갤러리4</li>
+            <li>갤러리5</li>
+        </ol>
+
+
+      
+            <div class="gallery">
+                <img src="img/test1.jpg" alt="샘플사진1">
+                <img src="img/test2.jpg" alt="샘플사진2">
+                <img src="img/test3.jpg" alt="샘플사진3">
+                <img src="img/test4.jpg" alt="샘플사진4">
+                <img src="img/test5.jpg" alt="샘플사진5">
+                <img src="img/test6.jpg" alt="샘플사진6">
+            </div>
+        
+    </div>
+<!-- ----쇼핑몰---- -->
+    <h2>쇼핑몰 보기</h2>
+
+
+
+    <div id="grid">
+        <h3>목록</h3>
+        <br>
+        
+     
+        <ol class="container">
+            <li>고양이1</li>
+            <li>고양이2</li>
+            <li>고양이3</li>
+            <li>고양이4</li>
+            <li>고양이5</li>
+        </ol>
+
+
+      
+            <div class="gallery">
+                <img src="img/test1.jpg" alt="샘플사진1">
+                <img src="img/test2.jpg" alt="샘플사진2">
+                <img src="img/test3.jpg" alt="샘플사진3">
+                <img src="img/test4.jpg" alt="샘플사진4">
+                <img src="img/test5.jpg" alt="샘플사진5">
+                <img src="img/test6.jpg" alt="샘플사진6">
+            </div>
+        
+    </div>
+
+
+    
+</body>
+</html>
