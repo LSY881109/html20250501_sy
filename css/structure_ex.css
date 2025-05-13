@@ -1,0 +1,249 @@
+/* 구글의 웹폰트 사이트에서 Dongle 글 꼴 가져오기, 
+임베디드 , 코드 가져오기 에서, import 형식으로 진행
+순서1, 
+설정 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle&family=Nanum+Pen+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 박스의 영역은 테두리 포함  */
+    box-sizing: border-box;
+    /* 순서2, 적용할 요소에 반영하기.  */
+    /* font-family: "Dongle"; */
+}
+
+a {
+    /* 기본 언더라인 제거 */
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    /* 0 : 위,아래의 마진, auto : 왼쪽,오른쪽 의 마진 -> 화면 중앙 배치 */
+    margin: 0 auto;
+    width: 1200px;
+    background-color: #fff;
+    display: grid;
+}
+
+/* 헤더 작업 */
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: coral;
+}
+
+#logo {
+    /* 헤더에서 특정 로고의 위치를 배치할 때 자주 사용함.  */
+    float: left;
+    width: 250px;
+    height: 100px;
+    /* 세로로 중간에 맞춤 , 줄간격을 높이 값과 같게 */
+    line-height: 100px;
+    padding-left: 20px;
+}
+
+#logo h1 {
+    font-family: "Dongle";
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    /* 텍스트의 그림자 넣기 
+    옵션1, 0 : 가로 오프셋, 텍스트 기준으로 그림자의 수평 위치 조정 양수 : 오른쪽, 음수 : 왼쪽
+    옵션2,-1px : 세로 오프셋 , 텍스트 기준으로 그림자의 수직 위치 조정 양수 : 아래, 음수 : 위로
+    옵션3, 0 : 그림자의 퍼지는 정도(흐림 효과), 0이면 날까롭게, / 값이 커지면 부드럽게 퍼진다 라고 표현
+    옵션4, #222 : 그림자의 색을 지정함, HEX, RGB, RGBA, 
+    */
+    text-shadow: 0 5px 0 #519c33d2;
+}
+
+nav {
+    float: right;
+    width: 900px;
+    height: 100px;
+    padding-top: 40px;
+}
+
+#topMenu {
+    height: 60px;
+}
+
+#topMenu>li {
+    float: left;
+    /* html 요소의 위치를 기준 위치로 설정하는 속성, 
+    요소를 문서 흐름에서 유지하면 자기 자신을 기준으로 
+    이동 할수 있게 설정.  */
+    /* 옵션, top, left, bottom, right , z-index(겹침의 순서, 값이 클수로 위에 배치) */
+    /* 여기가 기준 위치 입니다 */
+    position: relative;
+    /* top: 200px; */
+    /* left: 200px; */
+    /* z-index: 10; */
+}
+
+#topMenu>li>a {
+    display: block;
+    /* 부모의 요소의 글꼴 크기를 기준으로 상대 크기를 잡는 단위. 
+    예시) 1em , 부모 요소의 현재 글꼴 크기와 동일, 
+    예시) 1.1em , 부모 요소의 글꼴 크기보다 10% 더큼, 
+    예시) 0.9em , 부모 요소의 글꼴 크기보다 10% 더 작음,  
+    1em = 16px 
+    1.1em = 16 * 1.1 = 17.6px*/
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 600;
+    padding: 20px 60px;
+
+}
+
+
+#topMenu>li>a:hover {
+    color: aqua;
+    text-shadow: 0 -5px 0 #222;
+}
+
+/* 본문 작업 */
+
+.contents {
+    display:grid;
+    grid-template-columns: 200px 1fr;
+    width: 1000px;
+    /* 위,아래는 50px 여백 주고, 좌,우 자동 조절 */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 0;
+}
+
+main>section {
+    margin-top: 60px;
+}
+
+main h2 {
+    font-size: 1.5em;
+    line-height: 2.5;
+}
+
+main div {
+    margin-top: 20px;
+}
+
+main h3 {
+    font-size: 1.2em;
+    line-height: 2.2;
+}
+
+.detail p {
+    line-height: 2.0;
+    color: #222;
+}
+
+.detail>img {
+    width: 35%;
+    float: left;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+.video{
+    margin-top: 0;
+}
+
+.detail>video {
+    width: 35%;
+    float: left;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+.video {
+    padding: 0;
+}
+
+.schedule h4 {
+    font-size: 1.2em;
+}
+
+.schedule ul {
+    list-style: none;
+}
+
+.schedule ul li {
+    line-height: 2;
+}
+
+/* 푸터 영역 */
+
+footer {
+    width: 1200px;
+    height: 100px;
+    border-top: 2px solid #222;
+}
+
+#bottomMenu {
+    width: 100%;
+    height: 20px;
+    margin-left: 60px;
+}
+
+#bottomMenu ul {
+    margin-top: 15px;
+}
+
+#bottomMenu ul li {
+    float: left;
+    padding: 5px 20px;
+    border-right: 1px solid #ddd;
+}
+
+#bottomMenu ul li:last-child {
+    border: none;
+
+}
+
+#bottomMenu ul li a,
+#bottomMenu ul li a:visited {
+    font-size: 15px;
+    color: #666;
+}
+
+/* 사이드바 영역 */
+#sideBar {
+    width: 200px;
+    float: left;
+    padding: 20px;
+    margin-left: 30px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    
+}
+
+#sideBar li {
+    padding-top: 30px;
+}
+
+#sideBar a {
+    color: #519c33d2;
+    font-size: 18px;
+}
+
+#sideBar ol {
+    color: #5555;
+    font-size: 20px;
+}
+
+/* 그리드를 이용해서, 2분할 했고, 
+section을 div로 감싸서 id article  */
+#article {
+    margin-left: 50px;
+}
+
+
+
+
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css 파일 분리해서 불러오는 코드 -->
+    <link rel="stylesheet" href="css/structure_ex.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="logo">
+                <a href="#">
+                    <h1>미니 실습</h1>
+                </a>
+            </div>
+            <nav>
+                <ul id="topMenu">
+                    <li><a href="8-1.html">샘플 메뉴1</a></li>
+                    <li><a href="8-2.html">샘플 메뉴2</a></li>
+                    <li><a href="8-3.html">샘플 메뉴3</a></li>
+                    <li><a href="8-4.html">샘플 메뉴4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="contents">
+            <!-- 사이드바 추가 -->
+            <aside id="sideBar">
+                <h3>미니실습 목록</h3>
+                <ul>
+                    <div class="container">
+                        <ol>
+                            <li><a href="1.html">HTML</a></li>
+                            <li><a href="2.html">CSS</a></li>
+                            <li><a href="3.html">JavaScript</a></li>
+                            <li><a href="4.html">자기소개-미니실습</a></li>
+                            <li><a href="5.html">자기소개-박스테두리</a></li>
+                            <li><a href="6.html">미니실습25058</a></li>
+                            <li><a href="7.html">미니실습25059</a></li>
+                            <li><a href="8.html">미니실습250513</a></li>
+                        </ol>
+                </ul>
+            </aside>
+
+            <div id="article">
+
+                <section id="headline">
+                    <!-- --------------------------------- -->
+                    <h2>고양이 영상1</h2>
+                    <div class="detail">
+
+                        <!-- <img src="/img/test1.jpg" alt="샘플이미지1"> -->
+                        <video width="260" height="175" controls>
+                            <source src="video/무료영상2.mp4" type="video/mp4">
+
+                        </video>
+
+                        <div>
+                            <b>
+                                <p>샘플 설명1 강조</p>
+                            </b>
+                            <p>샘플 설명에 관한 여러가지 내용을 담기 등....</p>
+                        </div>
+                        <div class="schedule">
+                            <h3>샘플 보조 제목2</h3>
+                            <ul>
+                                <li>샘플 하위 일정</li>
+                                <li>샘플 하위 일정2 추가 사항 넣기</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- --------------------------------- -->
+
+
+                <section id="headline2">
+
+                    <h2>고영이 영상2</h2>
+                    <div class="detail">
+                        <!-- <img src="/img/test1.jpg" alt="샘플이미지2"> -->
+
+                        <video width="260" height="175" controls>
+                            <source src="video/무료영상3.mp4" type="video/mp4">
+
+                        </video>
+                        <b>
+                            <p>샘플 설명2 강조</p>
+                        </b>
+                        <p>샘플 설명에 관한 여러가지 내용을 담기 등....</p>
+                        
+                    </div>
+                    <div class="schedule">
+                        <h3>샘플 보조 제목2</h3>
+                        
+                        <ul>
+                            
+                            <li>샘플 하위 일정</li>
+                            <li>샘플 하위 일정2 추가 사항 넣기</li>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <section id="headline3">
+                    <h2>고양이 영상3</h2>
+                    <div class="detail">
+                        <!-- <img src="/img/test1.jpg" alt="샘플이미지3"> -->
+
+                        <video width="260" height="175" controls>
+                            <source src="video/무료영상4.mp4" type="video/mp4">
+
+                        </video>
+                        <b>
+                            <p>샘플 설명3 강조</p>
+                        </b>
+                        <p>샘플 설명에 관한 여러가지 내용을 담기 등....</p>
+                    </div>
+                    <div class="schedule">
+                        <h3>샘플 보조 제목3</h3>
+                        <ul>
+                            <li>샘플 하위 일정</li>
+                            <li>샘플 하위 일정3 추가 사항 넣기</li>
+                        </ul>
+                    </div>
+
+                </section>
+            </div>
+
+
+
+        </main>
+        <footer>
+            <section id="bottomMenu">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">샘플약관</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </section>
+        </footer>
+
+
+    </div>
+    <!-- 스크립트 파일 불러오는 위치, 맨밑에 js 파일을 두는 이유?
+    먼저, 화면에 렌더링 그림을 먼저 그려줘야 함. 
+    뒤에서 천천히 자바스크립트를 읽기,  -->
+</body>
+
+</html>

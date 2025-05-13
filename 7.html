@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미니실습</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            padding: 16px;
+            border: 5px solid gray;
+        }
+
+        @keyframes fadeSlideIn {
+
+            /* 초기, 중간, 마지막 단계 총 3단계 화면에 표시 */
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9) rotate(-5deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateY(10px) scale(1.02) rotate(2deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1) rotate(0deg);
+            }
+        }
+
+        .img-wrapper {
+            background-color: black;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+
+            animation-name: fadeSlideIn;
+            /* 2. animation-duration : 얼마나 오래 지속할지  */
+            animation-duration: 1.5s;
+            /* 3.  animation-timing-function: 가속도 곡선, 천천히 진입, 중간 빠르고, 나올때는 천천히 */
+            animation-timing-function: ease-in-out;
+            /* 4. animation-delay: 시작 전 대기 시간 */
+            animation-delay: 0.2s;
+            /* 5. animation-iteration-count : 반복 횟수, infinite 무한대 */
+            animation-iteration-count: 1;
+            /* 6. animation-direction: 정방향, reverse 역방향,  */
+            animation-direction: normal;
+            /* 7.  animation-fill-mode: 종료 후 , 스타일 유지 여부, forwards, backward, both */
+            animation-fill-mode: both;
+            /* 8.animation-play-state : 진행 할지, 멈추지 여부 */
+            animation-play-state: running;
+
+
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .img-wrapper:hover {
+            background-color: aqua;
+            transform: scale(1.05);
+        }
+
+        .img-wrapper img {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            display: block;
+            /* 0 : 위쪽 , 아랫쪽 의미, auto : 좌, 우 의미 -> 가운데 정렬, 자주 쓰는 패턴 */
+            margin: 0 auto;
+        }
+
+        .test1 {
+            border: 2px solid blue;
+        }
+
+
+        h2 {
+            font-size: 60px;
+            color: black;
+            text-align: center;
+            border-bottom: double;
+            border-top: double;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            margin: 0%;
+            color: black;
+            font-size: 30px;
+            text-align: center;
+            border: solid;
+        }
+
+        .minititle {
+
+            font-size: 30px;
+            color: brown;
+            text-align: center;
+        }
+
+        .img-effect:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <h2>갤러리</h2>
+
+    <div id="grid">
+        <h3>목록</h3>
+        <br>
+        <div class="container">
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+            <li><a href="4.html">자기소개-미니실습</a></li>
+            <li><a href="5.html">자기소개-박스테두리</a></li>
+            <li><a href="6.html">미니실습25058</a></li>
+            <li><a href="7.html">미니실습25059</a></li>
+            <li><a href="8.html">미니실습250513</a></li>
+
+
+        </div>
+
+        <!-- div두개를 사용하여 효과 2개 적용 -->
+        <div class="container">
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test1.jpg" alt="샘플사진1">1번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test2.jpg" alt="샘플사진1">2번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test3.jpg" alt="샘플사진1">2번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test3.jpg" alt="샘플사진1">3번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test2.jpg" alt="샘플사진1">4번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test6.jpg" alt="샘플사진1">5번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test1.jpg" alt="샘플사진1">6번고양이
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ----쇼핑몰---- -->
+    <h2>쇼핑몰 보기</h2>
+
+
+
+
+    <div id="grid">
+        <h3>목록</h3>
+        <br>
+        <div class="container">
+            <li>고양이1</li>
+            <li>고양이2</li>
+            <li>고양이3</li>
+            <li>고양이4</li>
+            <li>고양이5</li>
+        </div>
+
+
+
+        <div class="container">
+
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test1.jpg" alt="샘플사진1">1번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test2.jpg" alt="샘플사진1">2번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test3.jpg" alt="샘플사진1">2번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test3.jpg" alt="샘플사진1">3번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test2.jpg" alt="샘플사진1">4번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test6.jpg" alt="샘플사진1">5번고양이
+                </div>
+            </div>
+            <div class="img-wrapper test1 ">
+                <div class="img-effect">
+                    <img src="img/test1.jpg" alt="샘플사진1">6번고양이
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
